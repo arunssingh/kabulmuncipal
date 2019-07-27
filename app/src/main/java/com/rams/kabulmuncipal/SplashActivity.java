@@ -8,20 +8,24 @@ import android.content.pm.PackageManager.NameNotFoundException;
 import android.content.pm.Signature;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Base64;
-
+import android.view.View;
+import android.widget.RelativeLayout;
 
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
 import Utils.Logger1;
+import Utils.StaticDataHelper;
 
-public class SplashActivity extends AppCompatActivity {
+public class SplashActivity extends BaseActivity {
 
     private String LOG_TAG = "SplashActivity";
+    RelativeLayout rl2,rl1;
 
 
     public static void generateHashKeyForFb(Context context)
@@ -51,6 +55,8 @@ public class SplashActivity extends AppCompatActivity {
         //  this.requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.splash_activity);
 
+        rl2=findViewById(R.id.rl2);
+        rl1=findViewById(R.id.rl1);
 
         generateHashKeyForFb(this);
 
@@ -83,6 +89,25 @@ public class SplashActivity extends AppCompatActivity {
                 handleSendImage(intent); // Handle single image being sent
             }
         }
+        //
+ /*       new CountDownTimer(3000, 1000) {
+            public void onTick(long millisUntilFinished) {
+               // mTextField.setText("seconds remaining: " + millisUntilFinished / 1000);
+
+                Logger1.e("arun","arun");
+
+            }
+
+            public void onFinish() {
+                Logger1.e("arun completed","arun completed");
+               // mTextField.setText("done!");
+                rl1.setVisibility(View.VISIBLE);
+                rl2.setVisibility(View.GONE);
+            }
+        }.start();*/
+
+        //
+
         startSplash();
     }
 
@@ -129,13 +154,18 @@ public class SplashActivity extends AppCompatActivity {
                     public void run()
                     {
 
-
-                            startActivity(new Intent(SplashActivity.this,MainActivity.class));
+                        if(StaticDataHelper.getBooleanFromPreferences(SplashActivity.this,StaticDataHelper.isUserLogin)) {
+                            startActivity(new Intent(SplashActivity.this, MainActivity.class));
+                        }
+                        else
+                        {
+                            startActivity(new Intent(SplashActivity.this, Language_Acitivity.class));
+                        }
                         finish();
                     }
                 });
             }
-        },1500);
+        },4000);
 
     }
 

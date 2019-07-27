@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/header_bg"
+    tools:context=".Kabulcity_Acitivity">
+    <include
+        android:id="@+id/include"
+
+        layout="@layout/toolbar_compaint"
+        />
+    <ScrollView
+        android:layout_below="@+id/include"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_green"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+
+                android:textColor="@color/white"
+                android:text="@string/name"/>
+                <TextView
+                    android:id="@+id/name"
+                    android:textSize="16sp"
+
+                    android:textColor="@color/testred"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="5.5.0"/>
+
+
+            </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_green"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+
+                android:textColor="@color/white"
+                android:text="@string/emailid"/>
+            <TextView
+                android:id="@+id/email"
+                android:textSize="16sp"
+
+                android:textColor="@color/testred"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5.5.0"/>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_green"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+
+                android:textColor="@color/white"
+                android:text="@string/phonenumber"/>
+            <TextView
+                android:id="@+id/phonenmuber"
+                android:textSize="16sp"
+
+                android:textColor="@color/testred"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5.5.0"/>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_green"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+
+                android:textColor="@color/white"
+                android:text="@string/disctict"/>
+            <TextView
+                android:id="@+id/distict"
+                android:textSize="16sp"
+
+                android:textColor="@color/testred"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5.5.0"/>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_green"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+
+                android:textColor="@color/white"
+                android:text="@string/issues"/>
+            <TextView
+                android:id="@+id/issue"
+                android:textSize="16sp"
+
+                android:textColor="@color/testred"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5.5.0"/>
+
+
+        </LinearLayout>
+
+
+
+
+
+
+
+
+    </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

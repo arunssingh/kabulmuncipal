@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/header_bg"
+    tools:context=".Issue_reporting">
+    <include
+        android:id="@+id/include"
+
+        layout="@layout/toolbar_compaint" />
+
+    <ScrollView
+        android:id="@+id/ll_2"
+        android:layout_below="@+id/include"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+
+        android:scrollbars="none"
+
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/search"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                />
+
+            <RadioGroup
+                android:id="@+id/rg1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+                <RadioButton
+                    android:id="@+id/radiomale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15dp"
+                    android:textColor="@color/white"
+
+                    android:checked="true"
+                    android:onClick="onRadioButtonClicked"
+
+                    android:text="@string/code" />
+
+                <RadioButton
+                    android:id="@+id/radiofemale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:onClick="onRadioButtonClicked"
+                    android:textColor="@color/white"
+                    android:textSize="15dp"
+                    android:text="@string/name" />
+            </RadioGroup>
+
+        <LinearLayout
+            android:id="@+id/ll_name"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+
+
+
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content"
+                android:text="@string/name"
+                android:textSize="20sp"
+                android:textColor="@color/white"/>
+
+            <EditText
+                android:id="@+id/et_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+
+                android:maxLines="1"
+                android:textColorHint="@color/hint_color"
+
+
+                android:hint="@string/enername" />
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/fname"
+                android:layout_marginTop="5dp"
+                android:textSize="20sp"
+                android:textColor="@color/white"/>
+
+            <EditText
+                android:id="@+id/fname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+
+                android:maxLines="1"
+                android:textColorHint="@color/hint_color"
+
+
+                android:hint="@string/enerfname" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/gfname"
+                android:layout_marginTop="5dp"
+                android:textSize="20sp"
+                android:textColor="@color/white"/>
+
+            <EditText
+                android:id="@+id/fgname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+
+                android:maxLines="1"
+                android:textColorHint="@color/hint_color"
+
+
+                android:hint="@string/energfname" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/id"
+                android:layout_marginTop="5dp"
+                android:textSize="20sp"
+                android:textColor="@color/white"/>
+
+            <EditText
+                android:id="@+id/fgname1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+
+                android:maxLines="1"
+                android:textColorHint="@color/hint_color"
+
+
+                android:hint="@string/enerid" />
+        </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ll_code"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/yourcode"
+                    android:layout_marginTop="10dp"
+                    android:textSize="20sp"
+                    android:textColor="@color/white"/>
+
+                <EditText
+                    android:id="@+id/et_code"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+
+                    android:maxLines="1"
+                    android:textColorHint="@color/hint_color"
+
+
+                    android:hint="@string/eneryourcode" />
+            </LinearLayout>
+            <android.support.v7.widget.AppCompatButton
+
+                android:id="@+id/bt_final"
+                android:layout_marginTop="20dp"
+
+                android:layout_gravity="center"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:background="@drawable/btn_green"
+                android:paddingLeft="50dp"
+                android:paddingRight="50dp"
+                android:layout_marginBottom="10dp"
+
+                android:text="@string/searchonly" />
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+
+</RelativeLayout>

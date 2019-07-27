@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/header_bg"
+    tools:context=".Issue_reporting"
+>
+    <include
+        android:id="@+id/include"
+
+        layout="@layout/toolbar_compaint"
+        />
+    <LinearLayout
+android:layout_below="@+id/include"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+   android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.AppCompatButton
+
+            android:layout_width="match_parent"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/facebook"
+            android:textSize="18sp"
+            android:drawableLeft="@drawable/ic_facebook_icon"
+
+            android:padding="15dp"
+            android:id="@+id/but_face"
+            android:textColor="@color/white"
+            android:background="@drawable/btn_green"
+            android:textAllCaps="false"
+            android:layout_centerHorizontal="true"
+            android:layout_height="wrap_content" />
+
+
+    <android.support.v7.widget.AppCompatButton
+        android:layout_width="match_parent"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/kabulwebsite"
+        android:textSize="18sp"
+        android:padding="15dp"
+        android:id="@+id/but_complaint"
+        android:textColor="@color/white"
+        android:background="@drawable/btn_green"
+        android:textAllCaps="false"
+        android:drawableLeft="@drawable/ic_website_icon"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content" />
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recylerview"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
+
+    </LinearLayout>
+
+</RelativeLayout>

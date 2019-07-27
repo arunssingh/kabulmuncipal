@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Complaint_Register"
+    android:background="@mipmap/header_bg"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/toolbar_compaint"
+        />
+    <ScrollView
+        android:id="@+id/ll_1"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:scrollbars="none"
+        android:visibility="visible"
+
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/firstname"
+                android:textSize="20sp"
+                android:textColor="@color/white"/>
+
+                <EditText
+                    android:id="@+id/et_firstname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+
+                    android:textColor="@color/hint_color"
+                    android:textColorHint="@color/hint_color"
+                    android:maxLines="1"
+                    android:imeOptions="actionNext"
+
+                    android:hint="@string/enterfirstname" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/lastname"
+                android:textSize="20sp"
+                android:textColor="@color/white"/>
+
+            <EditText
+                android:id="@+id/et_lastname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:textColor="@color/hint_color"
+                android:textColorHint="@color/hint_color"
+                android:maxLines="1"
+                android:imeOptions="actionNext"
+
+                android:hint="@string/enterlastname" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/phonenumber"
+
+                android:textSize="20sp"
+                android:textColor="@color/white"/>
+
+            <EditText
+                android:id="@+id/et_phonenumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+
+                android:textColor="@color/hint_color"
+                android:textColorHint="@color/hint_color"
+                android:maxLines="1"
+
+                android:imeOptions="actionNext"
+
+                android:hint="@string/enterphonenumber" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/emailid"
+                android:textSize="20sp"
+                android:textColor="@color/white"/>
+
+                <EditText
+                    android:id="@+id/et_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:inputType="text"
+                    android:textColor="@color/hint_color"
+                    android:textColorHint="@color/hint_color"
+                    android:imeOptions="actionNext"
+                    android:hint="@string/enteremailid" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/designation"
+                android:textSize="20sp"
+                android:textColor="@color/white"/>
+
+                <EditText
+                    android:id="@+id/et_desination"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/hint_color"
+                    android:textColorHint="@color/hint_color"
+                    android:maxLines="1"
+
+
+                    android:hint="@string/enterdesignation" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/gender"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                />
+
+                <RadioGroup
+                    android:id="@+id/rg1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+
+                    <RadioButton
+                        android:id="@+id/radiomale"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="15dp"
+                        android:textColor="@color/white"
+                        android:checked="true"
+                        android:onClick="onRadioButtonClicked"
+
+                        android:text="@string/male" />
+
+                    <RadioButton
+                        android:id="@+id/radiofemale"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="onRadioButtonClicked"
+                        android:textColor="@color/white"
+                        android:textSize="15dp"
+                        android:text="@string/Female" />
+                </RadioGroup>
+
+
+
+
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/bt_con"
+                android:layout_marginTop="20dp"
+
+                android:layout_gravity="center"
+
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:background="@drawable/button_bg_rounded_corners"
+                android:paddingLeft="50dp"
+                android:paddingRight="50dp"
+
+                android:text="@string/next" />
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+    <ScrollView
+        android:id="@+id/ll_2"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:visibility="gone"
+        android:scrollbars="none"
+
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+
+
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/disctict"
+                android:textSize="20sp"
+                android:textColor="@color/white"/>
+
+            <RelativeLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="50dp"
+
+
+
+                >
+
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:layout_marginRight="-40dp"
+                    android:paddingLeft="5dp"
+                    android:padding="5dp"
+                    android:id="@+id/spinner_dist"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+
+
+
+                    android:layout_alignParentRight="true"
+                    app:srcCompat="@drawable/ic_drop_down_arrow_white" />
+
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/black"
+
+                />
+
+
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/directortiat"
+                android:textSize="20sp"
+                android:textColor="@color/white"/>
+
+
+            <RelativeLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="50dp"
+
+
+
+                >
+
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="-40dp"
+
+                    android:paddingLeft="5dp"
+                    android:padding="5dp"
+                    android:id="@+id/spinner_dirt"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+
+
+
+                    android:layout_alignParentRight="true"
+                    app:srcCompat="@drawable/ic_drop_down_arrow_white" />
+
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/black"
+
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/issues"
+                android:textSize="20sp"
+                android:textColor="@color/white"/>
+
+
+            <RelativeLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="50dp"
+
+
+
+                >
+
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="-40dp"
+                    android:paddingLeft="5dp"
+                    android:padding="5dp"
+                    android:id="@+id/spinner_issue"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+
+
+
+                    android:layout_alignParentRight="true"
+                    app:srcCompat="@drawable/ic_drop_down_arrow_white" />
+
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/black"
+
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/attachfile"
+                android:textSize="20sp"
+                android:textColor="@color/white"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/et_remarks"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:textColor="@color/hint_color"
+
+
+                android:layout_centerInParent="true"
+
+                android:maxLines="1"
+
+
+                android:text="@string/attachfile" />
+                <android.support.v7.widget.AppCompatButton
+
+                    android:id="@+id/bt_upload"
+
+
+                    android:layout_gravity="center"
+                    android:layout_alignParentRight="true"
+
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:background="@drawable/button_bg_rounded_corners"
+                    android:layout_marginBottom="2dp"
+                    android:paddingBottom="2dp"
+
+                    android:text="@string/upload" />
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1sp"
+                android:background="@color/black"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/remarks"
+                android:textSize="20sp"
+                android:textColor="@color/white"/>
+
+            <EditText
+                android:id="@+id/et_remark"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+
+                android:maxLines="1"
+                android:textColor="@color/hint_color"
+                android:textColorHint="@color/hint_color"
+
+
+                android:hint="@string/enterremarks" />
+            <android.support.v7.widget.AppCompatButton
+
+                android:id="@+id/bt_final"
+                android:layout_marginTop="20dp"
+
+                android:layout_gravity="center"
+
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:background="@drawable/button_bg_rounded_corners"
+                android:paddingLeft="50dp"
+                android:paddingRight="50dp"
+                android:layout_marginBottom="10dp"
+
+                android:text="@string/submit" />
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

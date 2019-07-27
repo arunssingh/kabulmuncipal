@@ -1,18 +1,181 @@
 <resources>
-    <string name="app_name">kabulmuncipal</string>
+    <string name="app_name">kabulmunicipal</string>
     <string name="home">Home</string>
     <string name="about_us">About Us</string>
-    <string name="language">Language</string>
+    <string name="about">About</string>
+    <string name="languages">Language</string>
+    <string name="setting">Settings</string>
     <string name="navigation_drawer_open">open</string>
     <string name="navigation_drawer_close">close</string>
     <string name="information">INFORMATION</string>
     <string name="kabul">KABUL</string>
     <string name="discussion">DISCUSSION</string>
     <string name="news">NEWS</string>
+    <string name="newsdis">NEWS and DISCUSSION</string>
     <string name="calculator">CALCULATOR</string>
     <string name="safaye">SAFAYE</string>
     <string name="reporting">REPORTING</string>
     <string name="issue">ISSUE</string>
+    <string name="issuereport">ISSUE REPORTING</string>
+    <string name="complaint">COMPLAINT REGISTRATION</string>
+    <string name="complaints">COMPLAINT</string>
+    <string name="complaint_recent">RECENT COMPLAINT</string>
+    <string name="firstname">First Name</string>
+    <string name="enterfirstname">Enter First Name</string>
+    <string name="lastname">Last Name</string>
+    <string name="enterlastname">Enter Last Name</string>
+    <string name="phonenumber">Phone Number</string>
+    <string name="enterphonenumber">Enter Phone Number(optional)</string>
+    <string name="emailid">Email Id</string>
+    <string name="enteremailid">Enter Email Id(optional)</string>
+    <string name="designation">Designation</string>
+    <string name="enterdesignation">Enter Designation</string>
+    <string name="male">Male</string>
+    <string name="Female">Female</string>
+    <string name="gender">Gender</string>
+    <string name="search">Search By</string>
+    <string name="safayesearch">SAFAYE SEARCH</string>
+    <string name="code">Code</string>
+    <string name="clickheres">Click Here to download for more Information</string>.
+
+    <string name="name">Name</string>
+    <string name="enername">Enter Name</string>
+    <string name="fname">F/Name</string>
+    <string name="enerfname">Enter F/Name</string>
+
+    <string name="gfname">G/F/Name</string>
+    <string name="energfname">Enter G/F/Name</string>
+    <string name="searchonly">Search</string>
+
+    <string name="id">ID</string>
+    <string name="enerid">Enter ID</string>
+    <string name="yourcode">Your Code</string>
+    <string name="yoursafayecalc">Your Safaye Calculator</string>
+    <string name="safayecalc">Safaye Calculator</string>
+    <string name="eneryourcode">Enter Your Code</string>
+
+    <string name="disctict">Disctict</string>
+    <string name="enterdisctict">Enter Disctict</string>
+    <string name="directortiat">Directortiat</string>
+    <string name="enterdirectortiat">Enter Directortiat</string>
+    <string name="issues">Issues</string>
+    <string name="enterissues">Enter Issues</string>
+    <string name="attachfile">Attach Photo</string>
+    <string name="upload">UPLOAD</string>
+    <string name="remarks">Remarks</string>
+    <string name="enterremarks">Enter Remarks</string>
+    <string name="submit">SUBMIT</string>
+    <string name="pleasenote">Please note that complaint can be reopened within 48 hours after complaint is completed</string>
+
+    <string name="referenceid">Reference Id:</string>
+    <string name="referenceid1">#owdWE2589sdrt</string>
+    <string name="registration">REGISTRATION</string>
+    <string name="recent">RECENT</string>
+
+    <string name="next">NEXT</string>
+    <string name="messagefrom">Message From SMC!</string>
+    <string name="norecent">No recent Complaint Found</string>
+
+    <string name="valueadded">VALUE ADDED</string>
+    <string name="tax">TAX</string>
+    <string name="businessreceipt">BUSINESS RECEIPT</string>
+    <string name="income">INCOME</string>
+    <string name="road">ROAD</string>
+    <string name="entertainmet">ENTERTAINMENT</string>
+    <string name="safayecal">SAFAYE CALCULATOR</string>
+    <string name="muncipal">MUNICIPAL</string>
+    <string name="contact">CONTACTS</string>
+    <string name="contactlatest">For inquiries, contact the Kabul Municipality Citizen Service Center </string>
+    <string name="contactss">Contact</string>
+    <string name="contactnumber">CONTACTS</string>
+    <string name="forbusiness">FOR BUSINESSES</string>
+    <string name="publics">PUBLIC</string>
+    <string name="services">SERVICES</string>
+    <string name="zone">Zone</string>
+    <string name="selectzone">Select Zone</string>
+    <string name="landtype">Land Type</string>
+    <string name="selectlandtype">Select Land Type</string>
+    <string name="buildingtype">Building Type</string>
+    <string name="selectbuildingtype">Select Building Type</string>
+    <string name="landarea">Land Area</string>
+    <string name="enterlandarea">Enter Land Area</string>
+    <string name="check">CHECK</string>
+    <string name="valuecubicmeter">Value of Cubic Meter</string>
+    <string name="entervaluecubicmeter">Enter Value of Cubic Meter</string>
+    <string name="development">DEVELOPMENT</string>
+    <string name="plans">PLANS</string>
+    <string name="organ">ORGANIZATIONAL</string>
+    <string name="chart">CHART</string>
+    <string name="touristic">TOURISTIC</string>
+    <string name="historic">HISTORIC SITES</string>
+    <string name="rulesand">RULES AND</string>
+    <string name="regulation">REGULATIONS</string>
+    <string name="masterplan">Master Plan Of Kabul City</string>
+    <string name="kabulwebsite">Kabul Municipality Website</string>
+    <string name="stragplan">Strategic Plan for Kabul Municipality</string>
+    <string name="developmentplan">Annual Development Plans</string>
+    <string name="developmentplan_base">Development Plans</string>
+    <string name="no_network_connectivity">No Network Connectivity</string>
+    <string name="facebook">Kabul Municipality Facebook</string>
+    <string name="version">Application version</string>
+    <string name="privacy">Privacy Policy</string>
+    <string name="githublink">GitHub link for Guatemala app </string>
+    <string name="githublinkkabul">GitHub link for Kabul Municipality app </string>
+    <string name="developmentcredit">Development Credits </string>
+    <string name="opensource">Open source license information</string>
+
+    open source license information
+
+    <string name="check_your_internet_connection">Check Your Internet Connection</string>
+    <string name="landplan">Land Rehabilitation Program and         Urban Development</string>
+    <string name="kabulcityplan">Urban design framework A clear and definite map of the way to sustainable growth in Kabul city!
+
+
+The new perspective of Kabul city (urban planning framework), which has given its master plans to Kabul, includes well-considered scientific and professional planning according to modern urban standards of the modern age. The framework of urban design from the viewpoint of scientists and experts Urban development
+    is the gateway or the perspective of sustainable growth and standard development in Kabul.</string>
+
+    <string name="clickhere">Click here to get a master plan for Kabul</string>
+    <string name="seelctlanghaue">Select Language</string>
+    <string name="pastho">PASHTO</string>
+    <string name="dari">DARI</string>
+
+
+    <string-array name="india_states">
+        <item>Select Disctict </item>
+        <item>Andaman and Nicobar Islands</item>
+        <item>Andhra Pradesh</item>
+
+    </string-array>
+    <string-array name="issue_array">
+        <item>Select Issues </item>
+        <item>Water</item>
+        <item>Road</item>
+
+    </string-array>
+    <string-array name="dir_array">
+        <item>Select Directortiat </item>
+        <item>dummy1</item>
+        <item>dummy2</item>
+
+    </string-array>
+    <string-array name="zone_array">
+        <item>Select Zone </item>
+        <item>dummy1</item>
+        <item>dummy2</item>
+
+    </string-array>
+    <string-array name="land_array">
+        <item>Select Land Type </item>
+        <item>dummy1</item>
+        <item>dummy2</item>
+
+    </string-array>
+    <string-array name="build_array">
+        <item>Select Building Type </item>
+        <item>dummy1</item>
+        <item>dummy2</item>
+
+    </string-array>
 
 
 </resources>

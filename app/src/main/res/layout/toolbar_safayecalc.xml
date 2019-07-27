@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:background="@mipmap/header_bg"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+    <ImageView
+        android:id="@+id/cross"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+    android:layout_centerVertical="true"
+        android:padding="3dp"
+        android:layout_marginLeft="5dp"
+        app:srcCompat="@drawable/ic_arrow_back_black_24dp"/>
+        
+
+    </android.support.v7.widget.Toolbar>
+    <TextView
+        android:id="@+id/toolbar_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_centerInParent="true"
+        android:singleLine="true"
+        android:text="@string/issuereport"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+    <ImageView
+        android:id="@+id/iv_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:padding="10dp"
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        app:srcCompat="@drawable/ic_search_black_24dp"/>
+</RelativeLayout>

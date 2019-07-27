@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/header_bg"
+    tools:context=".Kabulcity_Acitivity">
+    <include
+        android:id="@+id/include"
+
+        layout="@layout/toolbar_compaint"
+        />
+    <ScrollView
+        android:layout_below="@+id/include"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:orientation="vertical">
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:id="@+id/cv_gautman"
+
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            app:cardCornerRadius="5dp"
+            android:padding="20dp"
+            app:cardElevation="5dp"
+
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:padding="15dp"
+                        android:textColor="@color/black"
+                        android:text="@string/githublink"/>
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:id="@+id/cv_kabul"
+
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            app:cardCornerRadius="5dp"
+            android:padding="20dp"
+            app:cardElevation="5dp"
+
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:padding="15dp"
+                        android:textColor="@color/black"
+                        android:text="@string/githublinkkabul"/>
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            app:cardCornerRadius="5dp"
+            android:padding="20dp"
+            app:cardElevation="5dp"
+
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:padding="15dp"
+                        android:textColor="@color/black"
+                        android:text="@string/developmentcredit"/>
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:padding="10dp"
+                        android:layout_centerInParent="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:id="@+id/open5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone"
+                            app:srcCompat="@drawable/ic_dropdown_open_arrow"/>
+                        <ImageView
+                            android:id="@+id/hide5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            app:srcCompat="@drawable/ic_dropdown_hide_arrow"/>
+                    </RelativeLayout>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/rl_credit"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/versiondetail_s"
+                    android:gravity="center"
+                    android:textSize="16sp"
+                    android:padding="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:text="Click here"/>
+                    <ImageView
+                        android:id="@+id/iv_developmentcredit"
+                        android:layout_below="@+id/versiondetail_s"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="200dp"
+                        android:maxHeight="350dp"
+                        android:src="@drawable/shahar"
+                        />
+                </RelativeLayout>
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            app:cardCornerRadius="5dp"
+            android:padding="20dp"
+            app:cardElevation="5dp"
+
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:padding="15dp"
+                android:textColor="@color/black"
+                android:text="@string/version"/>
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:padding="10dp"
+              android:layout_centerInParent="true"
+                   android:layout_alignParentRight="true"
+                    android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/open"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/ic_dropdown_open_arrow"/>
+                <ImageView
+                    android:id="@+id/hide"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    app:srcCompat="@drawable/ic_dropdown_hide_arrow"/>
+                </RelativeLayout>
+               </RelativeLayout>
+
+            <TextView
+                android:id="@+id/versiondetail"
+                android:visibility="gone"
+                android:textSize="16sp"
+                android:padding="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5.5.0"/>
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+
+
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="5dp"
+        android:padding="20dp"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="5dp"
+
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="15dp"
+                    android:text="@string/opensource"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:id="@+id/open1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/ic_dropdown_open_arrow"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/hide1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:src="@drawable/ic_dropdown_hide_arrow" />
+                </RelativeLayout>
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/rl1"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv1"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="@string/kabulcityplan"
+                android:textSize="16sp"
+                />
+                <TextView
+                    android:layout_below="@+id/tv1"
+                    android:id="@+id/versiondetail_pricy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="Read More"
+                    android:textColor="@color/testred"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:textSize="16sp"
+                   />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+    </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

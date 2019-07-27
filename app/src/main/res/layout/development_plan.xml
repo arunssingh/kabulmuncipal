@@ -1,0 +1,486 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/header_bg"
+    tools:context=".Issue_reporting"
+>
+    <include
+        android:id="@+id/include"
+
+        layout="@layout/toolbar_compaint"
+        />
+    <LinearLayout
+        android:visibility="gone"
+android:layout_below="@+id/include"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+   android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
+
+    <android.support.v7.widget.AppCompatButton
+        android:layout_width="match_parent"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:text="@string/masterplan"
+        android:padding="15dp"
+        android:id="@+id/but_complaint"
+        android:textColor="@color/textlatest"
+        android:background="@drawable/button_bg_rounded_corners"
+        android:textAllCaps="false"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content" />
+        <android.support.v7.widget.AppCompatButton
+            android:layout_width="match_parent"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:text="@string/stragplan"
+            android:padding="15dp"
+
+            android:textAllCaps="false"
+            android:id="@+id/but_recent"
+            android:textColor="@color/textlatest"
+            android:background="@drawable/button_bg_rounded_corners"
+
+            android:layout_centerHorizontal="true"
+            android:layout_height="wrap_content" />
+        <android.support.v7.widget.AppCompatButton
+            android:layout_width="match_parent"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:text="@string/developmentplan"
+            android:padding="15dp"
+
+            android:textAllCaps="false"
+            android:id="@+id/but_anual"
+            android:textColor="@color/textlatest"
+            android:background="@drawable/button_bg_rounded_corners"
+
+            android:layout_centerHorizontal="true"
+            android:layout_height="wrap_content" />
+        <android.support.v7.widget.AppCompatButton
+            android:layout_width="match_parent"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:text="@string/landplan"
+            android:padding="15dp"
+
+
+            android:textAllCaps="false"
+            android:id="@+id/but_urban"
+            android:textColor="@color/textlatest"
+            android:background="@drawable/button_bg_rounded_corners"
+
+            android:layout_centerHorizontal="true"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_below="@+id/include"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="vertical">
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                app:cardCornerRadius="5dp"
+                android:padding="20dp"
+                app:cardElevation="5dp"
+
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="20sp"
+                            android:padding="15dp"
+                            android:textColor="@color/black"
+                            android:text="@string/masterplan"/>
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:padding="10dp"
+                            android:layout_centerInParent="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_height="wrap_content">
+                            <ImageView
+                                android:id="@+id/open"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:visibility="gone"
+                                app:srcCompat="@drawable/ic_dropdown_open_arrow"/>
+                            <ImageView
+                                android:id="@+id/hide"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+
+                                app:srcCompat="@drawable/ic_dropdown_hide_arrow"/>
+                        </RelativeLayout>
+                    </RelativeLayout>
+                    <LinearLayout
+                        android:id="@+id/ll_plan"
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/plan1"
+
+                            android:textSize="16sp"
+                            android:padding="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Plan"/>
+                        <View
+                            android:layout_width="wrap_content"
+                            android:layout_height="1sp"
+                            android:background="@color/black"/>
+                        <TextView
+                            android:id="@+id/plan2"
+
+                            android:textSize="16sp"
+                            android:padding="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Services"/>
+                        <View
+                            android:layout_width="wrap_content"
+                            android:layout_height="1sp"
+                            android:background="@color/black"/>
+                        <TextView
+                            android:id="@+id/plan3"
+
+                            android:textSize="16sp"
+                            android:padding="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/contactss"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+
+
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"
+                android:padding="20dp"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="5dp"
+
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="15dp"
+                            android:text="@string/stragplan"
+                            android:textColor="@color/black"
+                            android:textSize="20sp" />
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_alignParentRight="true"
+                            android:padding="10dp">
+
+                            <ImageView
+                                android:id="@+id/open1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:srcCompat="@drawable/ic_dropdown_open_arrow"
+                                android:visibility="gone" />
+
+                            <ImageView
+                                android:id="@+id/hide1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+
+                                app:srcCompat="@drawable/ic_dropdown_hide_arrow" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_strag"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/strag1"
+
+                            android:textSize="16sp"
+                            android:padding="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Plan"/>
+                        <View
+                            android:layout_width="wrap_content"
+                            android:layout_height="1sp"
+                            android:background="@color/black"/>
+                        <TextView
+                            android:id="@+id/strag2"
+
+                            android:textSize="16sp"
+                            android:padding="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Services"/>
+                        <View
+                            android:layout_width="wrap_content"
+                            android:layout_height="1sp"
+                            android:background="@color/black"/>
+                        <TextView
+                            android:id="@+id/strag3"
+
+                            android:textSize="16sp"
+                            android:padding="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/contactss"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"
+                android:padding="20dp"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="5dp"
+
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="15dp"
+                            android:text="@string/developmentplan"
+                            android:textColor="@color/black"
+                            android:textSize="20sp" />
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_alignParentRight="true"
+                            android:padding="10dp">
+
+                            <ImageView
+                                android:id="@+id/open2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:srcCompat="@drawable/ic_dropdown_open_arrow"
+                                android:visibility="gone" />
+
+                            <ImageView
+                                android:id="@+id/hide2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+
+                                app:srcCompat="@drawable/ic_dropdown_hide_arrow" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_develop"
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/develop1"
+
+                            android:textSize="16sp"
+                            android:padding="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Plan"/>
+                        <View
+                            android:layout_width="wrap_content"
+                            android:layout_height="1sp"
+                            android:background="@color/black"/>
+                        <TextView
+                            android:id="@+id/develop2"
+
+                            android:textSize="16sp"
+                            android:padding="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Services"/>
+                        <View
+                            android:layout_width="wrap_content"
+                            android:layout_height="1sp"
+                            android:background="@color/black"/>
+                        <TextView
+                            android:id="@+id/develop3"
+
+                            android:textSize="16sp"
+                            android:padding="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/contactss"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"
+                android:padding="20dp"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="5dp"
+
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="15dp"
+                            android:text="@string/landplan"
+                            android:textColor="@color/black"
+                            android:textSize="20sp" />
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_alignParentRight="true"
+                            android:padding="10dp">
+
+                            <ImageView
+                                android:id="@+id/open3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:srcCompat="@drawable/ic_dropdown_open_arrow"
+                                android:visibility="gone" />
+
+                            <ImageView
+                                android:id="@+id/hide3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+
+                                app:srcCompat="@drawable/ic_dropdown_hide_arrow" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:id="@+id/ll_landplan"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/landplan1"
+
+                            android:textSize="16sp"
+                            android:padding="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Plan"/>
+                        <View
+                            android:layout_width="wrap_content"
+                            android:layout_height="1sp"
+                            android:background="@color/black"/>
+                        <TextView
+                            android:id="@+id/landplan2"
+
+                            android:textSize="16sp"
+                            android:padding="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Services"/>
+                        <View
+                            android:layout_width="wrap_content"
+                            android:layout_height="1sp"
+                            android:background="@color/black"/>
+                        <TextView
+                            android:id="@+id/landplan3"
+
+                            android:textSize="16sp"
+                            android:padding="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/contactss"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
