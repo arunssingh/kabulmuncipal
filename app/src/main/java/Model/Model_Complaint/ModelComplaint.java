@@ -18,7 +18,7 @@ public class ModelComplaint implements Parcelable
     @SerializedName("id")
     @Expose
     private String ids;
-    @SerializedName("fname")
+    @SerializedName("name")
     @Expose
     private String fname;
     @SerializedName("lname")

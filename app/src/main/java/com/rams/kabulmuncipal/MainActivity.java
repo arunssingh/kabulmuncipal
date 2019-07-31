@@ -61,7 +61,7 @@ public class MainActivity extends BaseActivity {
         drawerLayout.setDrawerListener(mDrawerToggle);
 
        // slidershow();
-      //  setDefaultAdapter();
+        setDefaultAdapter();
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeButtonEnabled(true);

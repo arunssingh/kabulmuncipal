@@ -42,7 +42,7 @@ public class Information_Adapter extends RecyclerView.Adapter<RecyclerView.ViewH
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder viewHolder, final int i) {
 
         Information_Adapter.MyViewholder myViewholder=(Information_Adapter.MyViewholder)viewHolder;
-            MyUIApplication.getInstance().LoadImage(R.mipmap.ic_launcher, 100, 100, contaxt, list.get(i).getIcon(), myViewholder.iv_icon, false);
+            MyUIApplication.getInstance().LoadImage(R.mipmap.ic_launcher, 200, 200, contaxt, list.get(i).getIcon(), myViewholder.iv_icon, true);
             String []name= list.get(i).getName().split(" ");
             if(name.length==2) {
                 myViewholder.tv1.setText("" + name[0]);

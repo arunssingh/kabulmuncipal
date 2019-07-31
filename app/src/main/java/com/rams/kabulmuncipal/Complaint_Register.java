@@ -58,7 +58,7 @@ public class Complaint_Register extends BaseActivity {
     String sr="male";
     File newFile;
     Uri fileuri;
-    String picture_main = "";
+    String picture_main = null;
     ProgressDialog pDialog;
     MultipartBody.Part imagenPerfil = null;
     ArrayList<District> distictlist= new ArrayList<>();
@@ -113,44 +113,38 @@ public class Complaint_Register extends BaseActivity {
             }
         });
 
+        if (StaticDataHelper.isNetworkConnected(Complaint_Register.this)) {
+            getdistrict("");
+        }
+        else
+        {
+            StaticDataHelper.Show_Dialog(Complaint_Register.this);
+        }
+
+        if (StaticDataHelper.isNetworkConnected(Complaint_Register.this)) {
+            getdirect("");
+        }
+        else
+        {
+            StaticDataHelper.Show_Dialog(Complaint_Register.this);
+        }
+
+
         bt_con.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
                 if(et_firstname.getText().toString().trim().equals("") || et_firstname.getText().toString().trim().equals(null))
                 {
-                    Toast.makeText(Complaint_Register.this, "Please Enter First Name", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Complaint_Register.this, "Please Enter Name", Toast.LENGTH_SHORT).show();
                    // Staticutils.showToast(Registration_new.this,"Please enter Business/company name");
                     et_firstname.requestFocus();
                 }
 
-
-                else if(et_lastname.getText().toString().trim().equals("") || et_lastname.getText().toString().trim().equals(null))
-                {
-                    //Toast.makeText(Registration.this, "Please Enter Password", Toast.LENGTH_SHORT).show();
-                    //Staticutils.showToast(Registration_new.this,"Please Enter Password");
-                    Toast.makeText(Complaint_Register.this, "Please Enter Last Name", Toast.LENGTH_SHORT).show();
-                    et_lastname.requestFocus();
-                }
                 else
                 {
                     ll_1.setVisibility(View.GONE);
                     ll_2.setVisibility(View.VISIBLE);
-                    if (StaticDataHelper.isNetworkConnected(Complaint_Register.this)) {
-                        getdistrict("");
-                    }
-                    else
-                    {
-                        StaticDataHelper.Show_Dialog(Complaint_Register.this);
-                    }
-
-                    if (StaticDataHelper.isNetworkConnected(Complaint_Register.this)) {
-                        getdirect("");
-                    }
-                    else
-                    {
-                        StaticDataHelper.Show_Dialog(Complaint_Register.this);
-                    }
 
 
                 }
@@ -189,21 +183,51 @@ public class Complaint_Register extends BaseActivity {
             @Override
             public void onClick(View v) {
 
-                //Intent i = new Intent(Complaint_Register.this,Recent_Complaint.class);
-                //startActivity(i);
-                //finish();
+                if(et_firstname.getText().toString().trim().equals("") || et_firstname.getText().toString().trim().equals(null))
+                {
+                    Toast.makeText(Complaint_Register.this, "Please Enter Name", Toast.LENGTH_SHORT).show();
+                    // Staticutils.showToast(Registration_new.this,"Please enter Business/company name");
+                    et_firstname.requestFocus();
+                }
+               else if(spinner_dist.getSelectedItem().toString().equalsIgnoreCase("Select District"))
+                {
+                    Toast.makeText(Complaint_Register.this, "Select District", Toast.LENGTH_SHORT).show();
+                }
 
-                int indexValue = spinner_dist.getSelectedItemPosition();
-                int indexValue1 = spinner_dirt.getSelectedItemPosition();
-                int indexValue2 = spinner_issue.getSelectedItemPosition();
+                else if(spinner_dirt.getSelectedItem().toString().equalsIgnoreCase("Select Directortiat"))
+                {
+                    Toast.makeText(Complaint_Register.this, "Select Directortiat", Toast.LENGTH_SHORT).show();
+                }
+                else if(spinner_issue.getSelectedItem().toString().equalsIgnoreCase("Select Issues"))
+                {
+                    Toast.makeText(Complaint_Register.this, "Select Issues", Toast.LENGTH_SHORT).show();
+                }
+                else  if(et_remark.getText().toString().trim().equals("") || et_remark.getText().toString().trim().equals(null))
+                {
+                    Toast.makeText(Complaint_Register.this, "Please Enter Remarks", Toast.LENGTH_SHORT).show();
+                    // Staticutils.showToast(Registration_new.this,"Please enter Business/company name");
+                    et_remark.requestFocus();
+                }
+                else {
 
-                distid=distictlist.get(indexValue).getId();
-                Logger1.e("shekhawat","shekhawat="+distid);
+                    int indexValue = spinner_dist.getSelectedItemPosition();
+                    int indexValue1 = spinner_dirt.getSelectedItemPosition();
+                    int indexValue2 = spinner_issue.getSelectedItemPosition();
 
-                directorid=directorlist.get(indexValue1).getId();
-                issueid=issuelist.get(indexValue2).getId();
+                    distid = distictlist.get(indexValue).getId();
+                    Logger1.e("shekhawat", "shekhawat=" + distid);
 
-                UpdateComplaint_data();
+                    directorid = directorlist.get(indexValue1).getId();
+                    issueid = issuelist.get(indexValue2).getId();
+                    if (StaticDataHelper.isNetworkConnected(Complaint_Register.this)) {
+                        UpdateComplaint_data();
+                    }
+                    else
+                    {
+                        StaticDataHelper.Show_Dialog(Complaint_Register.this);
+                    }
+
+                }
 
 
             }
@@ -280,18 +304,14 @@ public class Complaint_Register extends BaseActivity {
                 RequestBody.create(
                         MediaType.parse("multipart/form-data"), et_firstname.getText().toString());
 
-        RequestBody lname =
-                RequestBody.create(
-                        MediaType.parse("multipart/form-data"), et_lastname.getText().toString());
+
         RequestBody phone =
                 RequestBody.create(
                         MediaType.parse("multipart/form-data"), et_phonenumber.getText().toString());
         RequestBody email =
                 RequestBody.create(
                         MediaType.parse("multipart/form-data"), et_email.getText().toString());
-        RequestBody designation =
-                RequestBody.create(
-                        MediaType.parse("multipart/form-data"), et_desination.getText().toString());
+
 
         RequestBody gender =
                 RequestBody.create(
@@ -318,12 +338,14 @@ public class Complaint_Register extends BaseActivity {
                         RequestBody.create(MediaType.parse("image/jpeg"), file);
                 // MultipartBody.Part is used to send also the actual file name
                 imagenPerfil = MultipartBody.Part.createFormData("attachment", file.getName(), requestFile);
+            }
+            else {
+                imagenPerfil=null;
+            }
 
                 ApiClient.getClient().create(ApiInterface.class).postcomlaint(fname,
-                        lname,
                         phone,
                         email,
-                        designation,
                         gender,
                         district,
                         directorate,
@@ -348,7 +370,7 @@ public class Complaint_Register extends BaseActivity {
                                 if (obj.optBoolean("status")) {
 
 
-
+                                    StaticDataHelper.showtoast(Complaint_Register.this,obj.optString("message")+"");
                          /*   String storeuser=jsonobj.optJSONObject("store").toString();
                             storemodel = MyUIApplication.getInstance().getGson().fromJson(storeuser, Store.class);*/
 
@@ -357,7 +379,7 @@ public class Complaint_Register extends BaseActivity {
 
 
                                 } else {
-                                    // StaticDataHelper.showtoast(My_profile.this,obj.optString("message")+"");
+                                     StaticDataHelper.showtoast(Complaint_Register.this,obj.optString("message")+"");
                                 }
 
 
@@ -387,7 +409,7 @@ public class Complaint_Register extends BaseActivity {
                         // StaticDataHelper.showtoast(My_profile.this, "" + t.getMessage());
                     }
                 });
-            }
+
         }
         // add another part within the multipart request
 
@@ -422,7 +444,7 @@ public class Complaint_Register extends BaseActivity {
                                     District[].class));
                             District district= new District();
                             district.setId("0");
-                            district.setName("Select Disctict");
+                            district.setName("Select District");
                             distictlist.add(district);
 
 

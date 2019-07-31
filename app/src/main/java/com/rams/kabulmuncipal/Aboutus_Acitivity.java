@@ -107,7 +107,7 @@ CardView cv_gautman,cv_kabul;
         cv_kabul.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/KabulMunicipality/"));
+                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/munis-transparencia-gobierno-abierto/municipalidad-de-chiantla"));
                 startActivity(browserIntent);
 
             }

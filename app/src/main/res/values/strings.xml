@@ -20,8 +20,8 @@
     <string name="complaint">COMPLAINT REGISTRATION</string>
     <string name="complaints">COMPLAINT</string>
     <string name="complaint_recent">RECENT COMPLAINT</string>
-    <string name="firstname">First Name</string>
-    <string name="enterfirstname">Enter First Name</string>
+    <string name="firstname">Name*</string>
+    <string name="enterfirstname">Enter Name</string>
     <string name="lastname">Last Name</string>
     <string name="enterlastname">Enter Last Name</string>
     <string name="phonenumber">Phone Number</string>
@@ -54,15 +54,19 @@
     <string name="safayecalc">Safaye Calculator</string>
     <string name="eneryourcode">Enter Your Code</string>
 
-    <string name="disctict">Disctict</string>
+    <string name="disctict">District</string>
+    <string name="disctictman">District*</string>
     <string name="enterdisctict">Enter Disctict</string>
     <string name="directortiat">Directortiat</string>
+    <string name="directortiatman">Directortiat*</string>
     <string name="enterdirectortiat">Enter Directortiat</string>
     <string name="issues">Issues</string>
+    <string name="issuesman">Issues*</string>
     <string name="enterissues">Enter Issues</string>
     <string name="attachfile">Attach Photo</string>
+    <string name="attachfileop">Attach Photo(optional)</string>
     <string name="upload">UPLOAD</string>
-    <string name="remarks">Remarks</string>
+    <string name="remarks">Remarks*</string>
     <string name="enterremarks">Enter Remarks</string>
     <string name="submit">SUBMIT</string>
     <string name="pleasenote">Please note that complaint can be reopened within 48 hours after complaint is completed</string>
@@ -86,6 +90,8 @@
     <string name="muncipal">MUNICIPAL</string>
     <string name="contact">CONTACTS</string>
     <string name="contactlatest">For inquiries, contact the Kabul Municipality Citizen Service Center </string>
+
+    <string name="contactlatestkb">Kabul Municipality issue reporting phone number</string>
     <string name="contactss">Contact</string>
     <string name="contactnumber">CONTACTS</string>
     <string name="forbusiness">FOR BUSINESSES</string>
@@ -100,6 +106,7 @@
     <string name="landarea">Land Area</string>
     <string name="enterlandarea">Enter Land Area</string>
     <string name="check">CHECK</string>
+    <string name="addnewbuilding">Add New Building</string>
     <string name="valuecubicmeter">Value of Cubic Meter</string>
     <string name="entervaluecubicmeter">Enter Value of Cubic Meter</string>
     <string name="development">DEVELOPMENT</string>

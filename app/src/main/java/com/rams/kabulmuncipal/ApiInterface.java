@@ -93,11 +93,9 @@ public interface ApiInterface {
     @Multipart
     @POST("register-complaint")
     Call<String> postcomlaint(
-            @Part("fname") RequestBody fname,
-            @Part("lname") RequestBody lname,
+            @Part("name") RequestBody name,
             @Part("phone") RequestBody phone,
             @Part("email") RequestBody email,
-            @Part("designation") RequestBody designation,
             @Part("gender") RequestBody gender,
             @Part("district") RequestBody district,
             @Part("directorate") RequestBody directorate,

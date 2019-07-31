@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/backbutton"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:orientation="vertical">
+
+
+
+
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/disctict"
+        android:textSize="20sp"
+        android:textColor="@color/white"/>
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="50dp"
+
+
+
+        >
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginRight="-40dp"
+            android:paddingLeft="5dp"
+            android:padding="5dp"
+            android:id="@+id/spinner_dist"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+
+
+
+            android:layout_alignParentRight="true"
+            app:srcCompat="@drawable/ic_drop_down_arrow_white" />
+
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/black"
+
+        />
+
+
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/zone"
+        android:textSize="20sp"
+        android:textColor="@color/white"/>
+
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="50dp"
+
+
+
+        >
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="-40dp"
+
+            android:paddingLeft="5dp"
+            android:padding="5dp"
+            android:id="@+id/spinner_dirt"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+
+
+
+            android:layout_alignParentRight="true"
+            app:srcCompat="@drawable/ic_drop_down_arrow_white" />
+
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/black"
+
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/landtype"
+        android:textSize="20sp"
+        android:textColor="@color/white"/>
+
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="50dp"
+
+
+
+        >
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="-40dp"
+            android:paddingLeft="5dp"
+            android:padding="5dp"
+            android:id="@+id/spinner_land"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+
+
+
+            android:layout_alignParentRight="true"
+            app:srcCompat="@drawable/ic_drop_down_arrow_white" />
+
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/black"
+
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/buildingtype"
+        android:textSize="20sp"
+        android:textColor="@color/white"/>
+
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="50dp"
+
+
+
+        >
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="-40dp"
+            android:paddingLeft="5dp"
+            android:padding="5dp"
+            android:id="@+id/spinner_build"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+
+
+
+            android:layout_alignParentRight="true"
+            app:srcCompat="@drawable/ic_drop_down_arrow_white" />
+
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/black"
+
+        />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/valuecubicmeter"
+        android:textSize="20sp"
+        android:textColor="@color/white"/>
+
+    <EditText
+        android:id="@+id/et_cubic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+
+        android:maxLines="1"
+        android:textColorHint="@color/hint_color"
+        android:textColor="@color/hint_color"
+
+
+        android:hint="@string/entervaluecubicmeter" />
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/landarea"
+        android:textSize="20sp"
+        android:textColor="@color/white"/>
+
+    <EditText
+        android:id="@+id/et_land"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+
+
+        android:maxLines="1"
+        android:textColorHint="@color/hint_color"
+        android:textColor="@color/hint_color"
+
+        android:hint="@string/enterlandarea" />
+    <android.support.v7.widget.AppCompatButton
+
+        android:id="@+id/addnewbuild"
+        android:layout_marginTop="20dp"
+
+        android:layout_gravity="right"
+
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:background="@drawable/btn_green"
+
+        android:paddingLeft="50dp"
+        android:paddingRight="50dp"
+        android:layout_marginBottom="10dp"
+
+        android:text="@string/addnewbuilding" />
+
+    </LinearLayout>
+
+</RelativeLayout>

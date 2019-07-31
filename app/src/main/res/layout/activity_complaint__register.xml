@@ -17,8 +17,9 @@
         android:layout_width="match_parent"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
+        android:visibility="gone"
         android:scrollbars="none"
-        android:visibility="visible"
+
 
         android:layout_height="match_parent">
 
@@ -31,7 +32,7 @@
 
 
 
-            <TextView
+      <!--      <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/firstname"
@@ -55,6 +56,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/lastname"
+                android:visibility="gone"
                 android:textSize="20sp"
                 android:textColor="@color/white"/>
 
@@ -63,6 +65,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="text"
+                android:visibility="gone"
                 android:textColor="@color/hint_color"
                 android:textColorHint="@color/hint_color"
                 android:maxLines="1"
@@ -116,6 +119,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/designation"
+                android:visibility="gone"
                 android:textSize="20sp"
                 android:textColor="@color/white"/>
 
@@ -126,6 +130,7 @@
                     android:textColor="@color/hint_color"
                     android:textColorHint="@color/hint_color"
                     android:maxLines="1"
+                    android:visibility="gone"
 
 
                     android:hint="@string/enterdesignation" />
@@ -165,7 +170,7 @@
                         android:textColor="@color/white"
                         android:textSize="15dp"
                         android:text="@string/Female" />
-                </RadioGroup>
+                </RadioGroup>-->
 
 
 
@@ -197,8 +202,9 @@
         android:layout_width="match_parent"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:visibility="gone"
+
         android:scrollbars="none"
+
 
         android:layout_height="match_parent">
 
@@ -208,7 +214,145 @@
             android:orientation="vertical">
 
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/firstname"
+                android:textSize="20sp"
+                android:textColor="@color/white"/>
 
+            <EditText
+                android:id="@+id/et_firstname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+
+                android:textColor="@color/hint_color"
+                android:textColorHint="@color/hint_color"
+                android:maxLines="1"
+                android:imeOptions="actionNext"
+
+                android:hint="@string/enterfirstname" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/lastname"
+                android:visibility="gone"
+                android:textSize="20sp"
+                android:textColor="@color/white"/>
+
+            <EditText
+                android:id="@+id/et_lastname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:visibility="gone"
+                android:textColor="@color/hint_color"
+                android:textColorHint="@color/hint_color"
+                android:maxLines="1"
+                android:imeOptions="actionNext"
+
+                android:hint="@string/enterlastname" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/phonenumber"
+
+                android:textSize="20sp"
+                android:textColor="@color/white"/>
+
+            <EditText
+                android:id="@+id/et_phonenumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+
+                android:textColor="@color/hint_color"
+                android:textColorHint="@color/hint_color"
+                android:maxLines="1"
+
+                android:imeOptions="actionNext"
+
+                android:hint="@string/enterphonenumber" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/emailid"
+                android:textSize="20sp"
+                android:textColor="@color/white"/>
+
+            <EditText
+                android:id="@+id/et_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:inputType="text"
+                android:textColor="@color/hint_color"
+                android:textColorHint="@color/hint_color"
+                android:imeOptions="actionNext"
+                android:hint="@string/enteremailid" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/designation"
+                android:visibility="gone"
+                android:textSize="20sp"
+                android:textColor="@color/white"/>
+
+            <EditText
+                android:id="@+id/et_desination"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/hint_color"
+                android:textColorHint="@color/hint_color"
+                android:maxLines="1"
+                android:visibility="gone"
+
+
+                android:hint="@string/enterdesignation" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/gender"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                />
+
+            <RadioGroup
+                android:id="@+id/rg1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+                <RadioButton
+                    android:id="@+id/radiomale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15dp"
+                    android:textColor="@color/white"
+                    android:checked="true"
+                    android:onClick="onRadioButtonClicked"
+
+                    android:text="@string/male" />
+
+                <RadioButton
+                    android:id="@+id/radiofemale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onRadioButtonClicked"
+                    android:textColor="@color/white"
+                    android:textSize="15dp"
+                    android:text="@string/Female" />
+            </RadioGroup>
 
 
 
@@ -216,7 +360,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/disctict"
+                android:text="@string/disctictman"
                 android:textSize="20sp"
                 android:textColor="@color/white"/>
 
@@ -264,7 +408,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/directortiat"
+                android:text="@string/directortiatman"
                 android:textSize="20sp"
                 android:textColor="@color/white"/>
 
@@ -308,7 +452,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/issues"
+                android:text="@string/issuesman"
                 android:textSize="20sp"
                 android:textColor="@color/white"/>
 
@@ -371,7 +515,7 @@
                 android:maxLines="1"
 
 
-                android:text="@string/attachfile" />
+                android:text="@string/attachfileop" />
                 <android.support.v7.widget.AppCompatButton
 
                     android:id="@+id/bt_upload"

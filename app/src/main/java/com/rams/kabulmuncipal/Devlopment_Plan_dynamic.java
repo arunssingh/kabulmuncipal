@@ -4,6 +4,7 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.AppCompatButton;
 import android.support.v7.widget.LinearLayoutManager;
@@ -188,6 +189,7 @@ LinearLayout rlparent;
             final ImageView open = (ImageView) not_view.findViewById(R.id.open);
             final ImageView hide = (ImageView) not_view.findViewById(R.id.hide);
             final TextView tv_name = (TextView) not_view.findViewById(R.id.tv_name);
+            final ImageView clicknext=not_view.findViewById(R.id.clicknext);
 
 
             final RecyclerView recyclerViewsub = (RecyclerView) not_view.findViewById(R.id.recyclerViewsub);
@@ -227,7 +229,28 @@ LinearLayout rlparent;
 
 
 
+                    //
                     if(developlist.get(finalI).getChildrens().size()==0)
+                    {
+                        Intent is = new Intent(Devlopment_Plan_dynamic.this, About_us.class);
+                        is.putExtra("name",developlist.get(finalI).getPlanName());
+                        is.putExtra("desc",developlist.get(finalI).getDescription());
+                        is.putExtra("file",developlist.get(finalI).getFile());
+                        startActivity(is);
+                    }
+                    else {
+
+                        Intent is = new Intent(Devlopment_Plan_dynamic.this, Chils_Plan_dynamic.class);
+                        is.putExtra("name",developlist.get(finalI).getPlanName());
+                        is.putParcelableArrayListExtra("childlist", (ArrayList<? extends Parcelable>) developlist.get(finalI).getChildrens());
+
+                        startActivity(is);
+
+                    }
+
+                    //
+
+                    /*if(developlist.get(finalI).getChildrens().size()==0)
                     {
                         Intent is = new Intent(Devlopment_Plan_dynamic.this, About_us.class);
                         is.putExtra("name",developlist.get(finalI).getPlanName());
@@ -245,7 +268,7 @@ LinearLayout rlparent;
                             open.setVisibility(View.VISIBLE);
                             hide.setVisibility(View.GONE);
                         }
-                    }
+                    }*/
                 }
             });
             /*open.setOnClickListener(new View.OnClickListener() {
