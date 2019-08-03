@@ -91,7 +91,7 @@ public class MainActivity extends BaseActivity {
         sales_calc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(MainActivity.this, Safaye_Calculator.class);
+                Intent i = new Intent(MainActivity.this, Safaye_Calculatorwithfloor.class);
                 startActivity(i);
             }
         });

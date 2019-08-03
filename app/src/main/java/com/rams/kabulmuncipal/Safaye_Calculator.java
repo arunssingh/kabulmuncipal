@@ -516,12 +516,9 @@ double calculasbaluefinalbefore=0.0;
                             double totalbuildprice = coefficent * price * cubic_value * 1.1;
                             // Land Coefficient * Land Area = Total Land Price
                             Logger1.e("totalbuildprice", "totalbuildprice=" + totalbuildprice);
-
                             Logger1.e("landcoefs", "landcoefs=" + landcoefs);
                             Logger1.e("land_value", "land_value=" + land_value);
                             double landprice = landcoefs * land_value;
-
-
                             Logger1.e("landprice", "landprice=" + landprice);
                             //Total Building Price + Total Land Price * Safay Calculator = Safaye Calculation
                             double totalbuils_land = totalbuildprice + landprice;

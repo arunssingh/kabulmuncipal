@@ -101,6 +101,11 @@
             android:screenOrientation="portrait"
             android:theme="@style/Base.Theme.AppCompat" />
 
+        <activity
+            android:name=".Safaye_Calculatorwithfloor"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeSplash" />
+
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
