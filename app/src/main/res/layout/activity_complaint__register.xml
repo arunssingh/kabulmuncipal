@@ -339,7 +339,7 @@
                     android:layout_height="wrap_content"
                     android:textSize="15dp"
                     android:textColor="@color/white"
-                    android:checked="true"
+
                     android:onClick="onRadioButtonClicked"
 
                     android:text="@string/male" />
@@ -351,7 +351,16 @@
                     android:onClick="onRadioButtonClicked"
                     android:textColor="@color/white"
                     android:textSize="15dp"
-                    android:text="@string/Female" />
+                    android:text="@string/female" />
+                <RadioButton
+                    android:id="@+id/radionotsay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onRadioButtonClicked"
+                    android:textColor="@color/white"
+                    android:textSize="15dp"
+                    android:text="@string/prefer" />
+
             </RadioGroup>
 
 

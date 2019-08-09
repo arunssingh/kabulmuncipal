@@ -49,6 +49,7 @@ public class Safaye_Calculatorwithfloor extends BaseActivity {
     Button bt_final, addnewbuild, bt_flooradd;
     boolean checkmultplevalue = false;
     boolean floormultplevalue = false;
+    //boolean finalcheckvalue = false;
     double calculasbaluefinalbefore = 0.0, totalbuildprice_lastfloor = 0.0;
     ArrayList<District> distictlist = new ArrayList<>();
     ArrayList<ZoneModel> zonelist = new ArrayList<>();
@@ -371,7 +372,6 @@ public class Safaye_Calculatorwithfloor extends BaseActivity {
 
         //shekhawat
 
-
         //shekhawat
 
         bt_flooradd.setOnClickListener(new View.OnClickListener() {
@@ -396,6 +396,7 @@ public class Safaye_Calculatorwithfloor extends BaseActivity {
                 } else {
                     try {
                         //  addnewbuild.setClickable(false);
+                        bt_flooradd.setClickable(false);
                         floormultplevalue = true;
 
                         int indexValue1 = spinner_dirt.getSelectedItemPosition();
@@ -547,7 +548,16 @@ public class Safaye_Calculatorwithfloor extends BaseActivity {
                             //Total Building Price + Total Land Price * Safay Calculator = Safaye Calculation
                             double totalbuils_land = totalbuildprice_lastfloor + landprice;
                             final double safayecalc = totalbuils_land * rateCoefficient;
+                         /*   if(finalcheckvalue) {
+
+                            }
+                            else
+                            {
+                                calculasbaluefinalbefore = safayecalc;
+                            }*/
+
                             calculasbaluefinalbefore = safayecalc;
+                            Logger1.e("calculasbaluefinalbefore arunsingh", "calculasbaluefinalbefore arunsingh=" + calculasbaluefinalbefore);
                             adddynmicview1(calculasbaluefinalbefore);
 
 
@@ -556,7 +566,7 @@ public class Safaye_Calculatorwithfloor extends BaseActivity {
                         }
                     }
                 }
-
+               // finalcheckvalue = false;
                 floormultplevalue = false;
                 totalbuildprice_lastfloor = 0.0;
             }
@@ -653,6 +663,7 @@ public class Safaye_Calculatorwithfloor extends BaseActivity {
                             // Staticutils.showToast(Registration_new.this,"Please enter Business/company name");
                             et_cubic_last_inner.requestFocus();
                         } else {
+                            //kachara
 
                             try {
                                 int indexValue1 = spinner_dirt_last.getSelectedItemPosition();
@@ -692,6 +703,8 @@ public class Safaye_Calculatorwithfloor extends BaseActivity {
                                 Logger1.e("calculasbaluefinalbefore", "calculasbaluefinalbeforess=" + calculasbaluefinalbefore);
 
                                 double lastfinalvalue = calculasbaluefinalbefore+safayecalc;
+                                   //kachara
+                               // calculasbaluefinalbefore=lastfinalvalue;
 
                                 ShowTHankDialog(lastfinalvalue);
                             } catch (NumberFormatException e) {
@@ -756,7 +769,7 @@ public class Safaye_Calculatorwithfloor extends BaseActivity {
                                 Logger1.e("rateCoefficient", "rateCoefficient=" + rateCoefficient);
                                 Logger1.e("totalbuils_land", "totalbuils_land=" + totalbuils_land);
                                 Logger1.e("lastfinalvalue", "lastfinalvalue=" + lastfinalvalue);
-
+                               calculasbaluefinalbefore=lastfinalvalue;
                                 ShowTHankDialog(lastfinalvalue);
                             } catch (NumberFormatException e) {
                                 e.printStackTrace();
@@ -831,7 +844,7 @@ public class Safaye_Calculatorwithfloor extends BaseActivity {
                     }
                 }
 
-
+               // finalcheckvalue = true;
                 //
             }
         });
@@ -846,7 +859,7 @@ public class Safaye_Calculatorwithfloor extends BaseActivity {
         iv_image.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(Safaye_Calculatorwithfloor.this, Safaye_Calculator_Search.class);
+                Intent i = new Intent(Safaye_Calculatorwithfloor.this, Safayecalculator_policy.class);
                 startActivity(i);
 
             }
@@ -867,8 +880,291 @@ public class Safaye_Calculatorwithfloor extends BaseActivity {
             @Override
             public void onClick(View view) {
                 dialog.dismiss();
-                //
+                finish();
+                startActivity(new Intent(Safaye_Calculatorwithfloor.this,Safaye_Calculatorwithfloor.class));
 
+
+                //
+           /*     try {
+                    et_land.setText("");
+                    et_cubic.setText("");
+                    rlparentfloor.removeAllViews();
+                    rlparentfloor.invalidate();
+
+                    rlparent.removeAllViews();
+                    rlparent.invalidate();
+
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+                totalbuildprice_lastfloor = 0.0;
+                calculasbaluefinalbefore = 0.0;
+                spinner_dist.setOnTouchListener(new View.OnTouchListener() {
+                    @Override
+                    public boolean onTouch(View v, MotionEvent event) {
+                        //   System.out.println("Real touch felt.");
+                        spinner_distTouched = true;
+                        return false;
+                    }
+                });
+                spinner_dirt.setOnTouchListener(new View.OnTouchListener() {
+                    @Override
+                    public boolean onTouch(View v, MotionEvent event) {
+                        //   System.out.println("Real touch felt.");
+                        spinner_dirtTouched = true;
+                        return false;
+                    }
+                });
+                spinner_land.setOnTouchListener(new View.OnTouchListener() {
+                    @Override
+                    public boolean onTouch(View v, MotionEvent event) {
+                        //   System.out.println("Real touch felt.");
+                        spinner_landTouched = true;
+                        return false;
+                    }
+                });
+
+                spinner_build.setOnTouchListener(new View.OnTouchListener() {
+                    @Override
+                    public boolean onTouch(View v, MotionEvent event) {
+                        //   System.out.println("Real touch felt.");
+                        spinner_buildTouched = true;
+                        return false;
+                    }
+                });
+
+                if (StaticDataHelper.isNetworkConnected(Safaye_Calculatorwithfloor.this)) {
+                    getdistrict("");
+                } else {
+                    StaticDataHelper.Show_Dialog(Safaye_Calculatorwithfloor.this);
+                }
+                ZoneModel district = new ZoneModel();
+                district.setId("0");
+                district.setCoefficient(0.0);
+                district.setDistrictId("0");
+                district.setName("Select Zone");
+                zonelist.add(district);
+
+
+                ArrayAdapter<ZoneModel> spinnerAdapter2 = new ArrayAdapter<ZoneModel>(Safaye_Calculatorwithfloor.this, R.layout.activity_ac, zonelist);
+                spinnerAdapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner_dirt.setAdapter(spinnerAdapter2);
+                landlist = new ArrayList<>();
+                LandType landtype = new LandType();
+                landtype.setId("0");
+                landtype.setRateCoefficient(0.0);
+                landtype.setName("Select Land Type");
+                landlist.add(landtype);
+
+
+                ArrayAdapter<LandType> spinnerAdapter3 = new ArrayAdapter<LandType>(Safaye_Calculatorwithfloor.this, R.layout.activity_ac, landlist);
+                spinnerAdapter3.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner_land.setAdapter(spinnerAdapter3);
+
+                buildlist = new ArrayList<>();
+                BuildModel buildmodel = new BuildModel();
+                buildmodel.setId("0");
+                buildmodel.setDistrict("");
+                buildmodel.setLand("");
+                buildmodel.setZone("");
+                buildmodel.setZone("");
+                buildmodel.setName("Select Building Type");
+                buildlist.add(buildmodel);
+
+
+                ArrayAdapter<BuildModel> spinnerAdapter4 = new ArrayAdapter<BuildModel>(Safaye_Calculatorwithfloor.this, R.layout.activity_ac, buildlist);
+                spinnerAdapter4.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner_build.setAdapter(spinnerAdapter4);
+
+
+                spinner_dist.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                    @Override
+                    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+
+                        if (spinner_distTouched) {
+                            if (StaticDataHelper.isNetworkConnected(Safaye_Calculatorwithfloor.this)) {
+
+                                String districtid = "0";
+                                try {
+                                    int indexValue1 = spinner_dist.getSelectedItemPosition();
+                                    districtid = distictlist.get(indexValue1).getId();
+                                } catch (Exception e) {
+                                    e.printStackTrace();
+                                }
+                                zonelist = new ArrayList<>();
+                                ZoneModel district = new ZoneModel();
+                                district.setId("0");
+                                district.setCoefficient(0.0);
+                                district.setDistrictId("0");
+                                district.setName("Select Zone");
+                                zonelist.add(district);
+
+
+                                ArrayAdapter<ZoneModel> spinnerAdapter2 = new ArrayAdapter<ZoneModel>(Safaye_Calculatorwithfloor.this, R.layout.activity_ac, zonelist);
+                                spinnerAdapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                                spinner_dirt.setAdapter(spinnerAdapter2);
+
+                                landlist = new ArrayList<>();
+                                LandType landtype = new LandType();
+                                landtype.setId("0");
+                                landtype.setRateCoefficient(0.0);
+                                landtype.setName("Select Land Type");
+                                landlist.add(landtype);
+
+
+                                ArrayAdapter<LandType> spinnerAdapter3 = new ArrayAdapter<LandType>(Safaye_Calculatorwithfloor.this, R.layout.activity_ac, landlist);
+                                spinnerAdapter3.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                                spinner_land.setAdapter(spinnerAdapter3);
+                                buildlist = new ArrayList<>();
+                                BuildModel buildmodel = new BuildModel();
+                                buildmodel.setId("0");
+                                buildmodel.setDistrict("");
+                                buildmodel.setLand("");
+                                buildmodel.setZone("");
+                                buildmodel.setZone("");
+                                buildmodel.setName("Select Building Type");
+                                buildlist.add(buildmodel);
+
+
+                                ArrayAdapter<BuildModel> spinnerAdapter4 = new ArrayAdapter<BuildModel>(Safaye_Calculatorwithfloor.this, R.layout.activity_ac, buildlist);
+                                spinnerAdapter4.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                                spinner_build.setAdapter(spinnerAdapter4);
+                                if (districtid.equalsIgnoreCase("0")) {
+
+
+                                } else {
+                                    getzone(distictlist.get(position).getId());
+                                }
+                            } else {
+                                StaticDataHelper.Show_Dialog(Safaye_Calculatorwithfloor.this);
+                            }
+                        }
+                        spinner_distTouched = false;
+                    }
+
+                    @Override
+                    public void onNothingSelected(AdapterView<?> parent) {
+
+                    }
+                });
+                spinner_dirt.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                    @Override
+                    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+
+                        if (spinner_dirtTouched) {
+                            if (StaticDataHelper.isNetworkConnected(Safaye_Calculatorwithfloor.this)) {
+
+                                String districtid = "0";
+                                String zonalid = "0";
+                                try {
+                                    int indexValue2 = spinner_dist.getSelectedItemPosition();
+                                    districtid = distictlist.get(indexValue2).getId();
+
+                                    int indexValue1 = spinner_dirt.getSelectedItemPosition();
+                                    zonalid = zonelist.get(indexValue1).getId();
+                                } catch (Exception e) {
+                                    e.printStackTrace();
+                                }
+                                landlist = new ArrayList<>();
+                                LandType landtype = new LandType();
+                                landtype.setId("0");
+                                landtype.setRateCoefficient(0.0);
+                                landtype.setName("Select Land Type");
+                                landlist.add(landtype);
+
+
+                                ArrayAdapter<LandType> spinnerAdapter3 = new ArrayAdapter<LandType>(Safaye_Calculatorwithfloor.this, R.layout.activity_ac, landlist);
+                                spinnerAdapter3.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                                spinner_land.setAdapter(spinnerAdapter3);
+                                buildlist = new ArrayList<>();
+                                BuildModel buildmodel = new BuildModel();
+                                buildmodel.setId("0");
+                                buildmodel.setDistrict("");
+                                buildmodel.setLand("");
+                                buildmodel.setZone("");
+                                buildmodel.setZone("");
+                                buildmodel.setName("Select Building Type");
+                                buildlist.add(buildmodel);
+
+
+                                ArrayAdapter<BuildModel> spinnerAdapter4 = new ArrayAdapter<BuildModel>(Safaye_Calculatorwithfloor.this, R.layout.activity_ac, buildlist);
+                                spinnerAdapter4.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                                spinner_build.setAdapter(spinnerAdapter4);
+
+                                if (zonalid.equalsIgnoreCase("0")) {
+
+
+                                } else {
+
+                                    getland(districtid, zonelist.get(position).getId());
+                                }
+
+                            } else {
+                                StaticDataHelper.Show_Dialog(Safaye_Calculatorwithfloor.this);
+                            }
+                        }
+                        spinner_dirtTouched = false;
+                    }
+
+                    @Override
+                    public void onNothingSelected(AdapterView<?> parent) {
+
+                    }
+                });
+
+
+                spinner_land.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                    @Override
+                    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                        if (spinner_landTouched) {
+                            if (StaticDataHelper.isNetworkConnected(Safaye_Calculatorwithfloor.this)) {
+
+                                int indexValue1 = spinner_dist.getSelectedItemPosition();
+                                int indexValue2 = spinner_dirt.getSelectedItemPosition();
+                                String districtid = "0";
+                                String zoneid = "0";
+                                try {
+                                    districtid = distictlist.get(indexValue1).getId();
+                                    zoneid = zonelist.get(indexValue2).getId();
+                                } catch (Exception e) {
+                                    e.printStackTrace();
+                                }
+
+                                if (zoneid.equalsIgnoreCase("0")) {
+                                    buildlist = new ArrayList<>();
+                                    BuildModel buildmodel1 = new BuildModel();
+                                    buildmodel1.setId("0");
+                                    buildmodel1.setDistrict("");
+                                    buildmodel1.setLand("");
+                                    buildmodel1.setZone("");
+                                    buildmodel1.setName("Select Building Type");
+                                    buildlist.add(buildmodel1);
+
+
+                                    ArrayAdapter<BuildModel> spinnerAdapter5 = new ArrayAdapter<BuildModel>(Safaye_Calculatorwithfloor.this, R.layout.activity_ac, buildlist);
+                                    spinnerAdapter5.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                                    spinner_build.setAdapter(spinnerAdapter5);
+                                } else {
+
+                                    try {
+                                        getbuild(districtid, zoneid, landlist.get(position).getId());
+                                    } catch (Exception e) {
+                                        e.printStackTrace();
+                                    }
+                                }
+                            } else {
+                                StaticDataHelper.Show_Dialog(Safaye_Calculatorwithfloor.this);
+                            }
+                        }
+                        spinner_landTouched = false;
+                    }
+
+                    @Override
+                    public void onNothingSelected(AdapterView<?> parent) {
+
+                    }
+                });
+*/
                 //
                 // startActivity(new Intent(CartOfProducts.this, HomeCategories.class));
 
@@ -1872,6 +2168,7 @@ public class Safaye_Calculatorwithfloor extends BaseActivity {
                     et_land_last.requestFocus();
                 } else {
 
+                    floormultplevalue = false;
                     try {
                         int indexValue1 = spinner_dirt_last.getSelectedItemPosition();
                         double coefficent = zonelist_last.get(indexValue1).getCoefficient();

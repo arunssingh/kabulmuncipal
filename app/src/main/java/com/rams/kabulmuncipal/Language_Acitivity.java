@@ -68,7 +68,7 @@ RelativeLayout  rl1,rl2;
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if(isChecked)
                 {
-                    StaticDataHelper.setBooleanInPreferences(Language_Acitivity.this,StaticDataHelper.isUserLogin,true);
+                   StaticDataHelper.setBooleanInPreferences(Language_Acitivity.this,StaticDataHelper.isUserLogin,true);
 
                     StaticDataHelper.setStringInPreferences(Language_Acitivity.this,StaticDataHelper.LANGUAGE,"PASHTO");
                     check_dari.setChecked(false);

@@ -55,7 +55,7 @@ public class Complaint_Register extends BaseActivity {
     AppCompatButton bt_con,bt_upload,bt_final;
     ScrollView ll_1,ll_2;
     RadioGroup rg1;
-    String sr="male";
+    String sr="";
     File newFile;
     Uri fileuri;
     String picture_main = null;
@@ -290,6 +290,10 @@ public class Complaint_Register extends BaseActivity {
             case R.id.radiofemale:
                 if (checked)
                     sr = "female";
+                break;
+            case R.id.radionotsay:
+                if (checked)
+                    sr = "Prefer not to say";
                 break;
         }
     }

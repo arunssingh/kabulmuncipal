@@ -84,19 +84,16 @@
 
             android:id="@+id/bt_flooradd"
             android:layout_marginTop="20dp"
-
             android:layout_gravity="right"
-
-
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/white"
-            android:background="@drawable/btn_green"
+            android:textColor="@color/testred"
+            android:background="@drawable/btn_green_dy"
             android:paddingLeft="50dp"
-            android:paddingRight="50dp"
+
             android:layout_marginBottom="10dp"
 
-            android:text="Add floor" />
+            android:text="Add floor for same building ?" />
 
     </LinearLayout>
 

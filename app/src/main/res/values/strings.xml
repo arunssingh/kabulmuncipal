@@ -3,6 +3,7 @@
     <string name="home">Home</string>
     <string name="about_us">About Us</string>
     <string name="about">About</string>
+    <string name="safayepolicytitle">Safaye Calculator policy</string>
     <string name="languages">Language</string>
     <string name="setting">Settings</string>
     <string name="navigation_drawer_open">open</string>
@@ -31,7 +32,9 @@
     <string name="designation">Designation</string>
     <string name="enterdesignation">Enter Designation</string>
     <string name="male">Male</string>
-    <string name="Female">Female</string>
+    <string name="female">Female</string>
+    <string name="prefer">Prefer not to say</string>
+
     <string name="gender">Gender</string>
     <string name="search">Search By</string>
     <string name="safayesearch">SAFAYE SEARCH</string>
@@ -125,6 +128,7 @@
     <string name="no_network_connectivity">No Network Connectivity</string>
     <string name="facebook">Kabul Municipality Facebook</string>
     <string name="version">Application version</string>
+    <string name="safayepolicy">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</string>
     <string name="privacy">Privacy Policy</string>
     <string name="githublink">GitHub link for Guatemala app </string>
     <string name="githublinkkabul">GitHub link for Kabul Municipality app </string>
@@ -139,6 +143,7 @@
 
 
 The new perspective of Kabul city (urban planning framework), which has given its master plans to Kabul, includes well-considered scientific and professional planning according to modern urban standards of the modern age. The framework of urban design from the viewpoint of scientists and experts Urban development
+    is the gateway or the perspective of sustainable growth and standard development in Kabul.The new perspective of Kabul city (urban planning framework), which has given its master plans to Kabul, includes well-considered scientific and professional planning according to modern urban standards of the modern age. The framework of urban design from the viewpoint of scientists and experts Urban development
     is the gateway or the perspective of sustainable growth and standard development in Kabul.</string>
 
     <string name="clickhere">Click here to get a master plan for Kabul</string>

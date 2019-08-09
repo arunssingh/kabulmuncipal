@@ -224,14 +224,14 @@
                 android:id="@+id/et_cubic"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="numberDecimal"
+                android:hint="@string/entervaluecubicmeter"
 
+                android:inputType="numberDecimal"
                 android:maxLines="1"
-                android:textColorHint="@color/hint_color"
                 android:textColor="@color/hint_color"
 
 
-                android:hint="@string/entervaluecubicmeter" />
+                android:textColorHint="@color/hint_color" />
 
 
 
@@ -267,13 +267,13 @@
 
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/white"
-                android:background="@drawable/btn_green"
+                android:textColor="@color/testred"
+                android:background="@drawable/btn_green_dy"
                 android:paddingLeft="50dp"
-                android:paddingRight="50dp"
+
                 android:layout_marginBottom="10dp"
 
-                android:text="Add floor" />
+                android:text="Add floor for same building ?" />
             <LinearLayout
                 android:id="@+id/rlparentfloor"
                 android:layout_width="match_parent"

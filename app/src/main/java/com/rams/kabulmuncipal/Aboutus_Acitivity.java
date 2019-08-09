@@ -17,7 +17,7 @@ TextView toolbar_title,click;
 Toolbar toolbar;
 ImageView cross,open,hide,open1,hide1,open5,hide5,iv_developmentcredit;
 TextView versiondetail,versiondetail_pricy;
-RelativeLayout rl1,rl_credit;
+RelativeLayout rl1,rl_credit,rldevelopcredit,rl_versions,rl_opens;
 CardView cv_gautman,cv_kabul;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +38,9 @@ CardView cv_gautman,cv_kabul;
         hide1=findViewById(R.id.hide1);
         versiondetail_pricy=findViewById(R.id.versiondetail_pricy);
         rl1=findViewById(R.id.rl1);
+        rldevelopcredit=findViewById(R.id.rldevelopcredit);
+        rl_versions=findViewById(R.id.rl_versions);
+        rl_opens=findViewById(R.id.rl_opens);
         // String title=Issue_reporting.this.getResources().getString(R.string.issuereport);
         toolbar.setTitle("");
         cross=findViewById(R.id.cross);
@@ -51,7 +54,86 @@ CardView cv_gautman,cv_kabul;
                 finish();
             }
         });
-        open.setOnClickListener(new View.OnClickListener() {
+
+        rl_opens.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(rl1.getVisibility()==View.VISIBLE)
+                {
+                    open1.setVisibility(View.GONE);
+                    hide1.setVisibility(View.VISIBLE);
+                    rl1.setVisibility(View.GONE);
+                }
+                else
+                {
+                    open1.setVisibility(View.VISIBLE);
+                    hide1.setVisibility(View.GONE);
+
+                    rl1.setVisibility(View.VISIBLE);
+                }
+
+            }
+        });
+
+        rl_versions.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(versiondetail.getVisibility()==View.VISIBLE)
+                {
+                    open.setVisibility(View.GONE);
+                    hide.setVisibility(View.VISIBLE);
+                    versiondetail.setVisibility(View.GONE);
+                }
+                else
+                {
+                    open.setVisibility(View.VISIBLE);
+                    hide.setVisibility(View.GONE);
+
+                    versiondetail.setVisibility(View.VISIBLE);
+                }
+
+            }
+        });
+
+        rldevelopcredit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(rl_credit.getVisibility()==View.VISIBLE)
+                {
+                    open5.setVisibility(View.GONE);
+                    hide5.setVisibility(View.VISIBLE);
+                    rl_credit.setVisibility(View.GONE);
+                }
+                else
+                {
+                    open5.setVisibility(View.VISIBLE);
+                    hide5.setVisibility(View.GONE);
+
+                    rl_credit.setVisibility(View.VISIBLE);
+                }
+
+            }
+        });
+
+   /*     open1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                open1.setVisibility(View.GONE);
+                hide1.setVisibility(View.VISIBLE);
+                rl1.setVisibility(View.GONE);
+            }
+        });
+        hide1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                open1.setVisibility(View.VISIBLE);
+                hide1.setVisibility(View.GONE);
+
+                rl1.setVisibility(View.VISIBLE);
+
+            }
+        });*/
+ /*       open.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 open.setVisibility(View.GONE);
@@ -68,8 +150,8 @@ CardView cv_gautman,cv_kabul;
                 versiondetail.setVisibility(View.VISIBLE);
 
             }
-        });
-        open5.setOnClickListener(new View.OnClickListener() {
+        });*/
+/*        open5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 open5.setVisibility(View.GONE);
@@ -86,7 +168,7 @@ CardView cv_gautman,cv_kabul;
                 rl_credit.setVisibility(View.VISIBLE);
 
             }
-        });
+        });*/
 
         iv_developmentcredit.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -113,23 +195,6 @@ CardView cv_gautman,cv_kabul;
             }
         });
 
-        open1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                open1.setVisibility(View.GONE);
-                hide1.setVisibility(View.VISIBLE);
-                rl1.setVisibility(View.GONE);
-            }
-        });
-        hide1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                open1.setVisibility(View.VISIBLE);
-                hide1.setVisibility(View.GONE);
 
-                rl1.setVisibility(View.VISIBLE);
-
-            }
-        });
     }
 }
