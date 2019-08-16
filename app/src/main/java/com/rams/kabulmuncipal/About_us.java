@@ -54,6 +54,8 @@ ProgressDialog pDialog;
     Toolbar toolbar;
     ImageView cross;
     String url;
+    String name;
+    String desc;
     public static String output_file = "";
     public static final int MY_PERMISSIONS_REQUEST_CAMERA = 100;
     public static final String ALLOW_KEY = "ALLOWED";
@@ -88,12 +90,16 @@ ProgressDialog pDialog;
       //  webview.loadUrl("https://marvelapp.com/c50i33e");
 
         Bundle extras = getIntent().getExtras();
-        String name=extras.getString("name");
-        String desc=extras.getString("desc");
+        name=extras.getString("name");
+        desc=extras.getString("desc");
         url=extras.getString("file");
         Logger1.e("url","urlfile="+url);
         //toolbar_title.setText(""+name);
         toolbar_title.setText(""+name);
+        if(url.isEmpty())
+        {
+            tv_detail.setVisibility(View.GONE);
+        }
         cross.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -139,7 +145,7 @@ ProgressDialog pDialog;
 
                     File f = new File(StaticDataHelper.GetFileName(About_us.this, url));
 
-                 if (f.exists()) {
+              if (f.exists()) {
 
                         openFile(f);
 
@@ -149,6 +155,8 @@ ProgressDialog pDialog;
                         new DownloadFile().execute(url);
 
                     }
+
+
 
                 } else {
 

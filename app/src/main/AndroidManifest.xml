@@ -116,6 +116,19 @@
             android:name=".Tutorial_Firstscreen"
             android:screenOrientation="portrait"
             android:theme="@style/AppThemeSplash" />
+        <activity
+            android:name=".Safaye_calculatormain"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeSplash" />
+        <activity
+            android:name=".Pdfviewer_Activity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeSplash" />
+        <activity
+            android:name=".Pdfview_library"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeSplash" />
+
 
         <meta-data
             android:name="preloaded_fonts"

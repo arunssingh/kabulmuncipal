@@ -14,6 +14,7 @@
     <string name="news">NEWS</string>
     <string name="newsdis">NEWS and DISCUSSION</string>
     <string name="calculator">CALCULATOR</string>
+    <string name="menu">MENU</string>
     <string name="safaye">SAFAYE</string>
     <string name="reporting">REPORTING</string>
     <string name="issue">ISSUE</string>
@@ -37,6 +38,7 @@
 
     <string name="gender">Gender</string>
     <string name="search">Search By</string>
+    <string name="searchs">Search</string>
     <string name="safayesearch">SAFAYE SEARCH</string>
     <string name="code">Code</string>
     <string name="clickheres">Click Here to download for more Information</string>.

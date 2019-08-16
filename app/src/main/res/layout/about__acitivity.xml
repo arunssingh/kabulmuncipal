@@ -163,7 +163,7 @@
                         android:layout_height="wrap_content"
                         android:minHeight="200dp"
                         android:maxHeight="350dp"
-                        android:src="@drawable/us"
+                        android:src="@drawable/shahar"
                         />
                 </RelativeLayout>
             </LinearLayout>

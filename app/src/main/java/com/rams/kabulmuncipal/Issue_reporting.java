@@ -5,9 +5,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.AppCompatButton;
 import android.support.v7.widget.Toolbar;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+
+import io.github.douglasjunior.androidSimpleTooltip.SimpleTooltip;
 
 public class Issue_reporting extends BaseActivity {
 Toolbar toolbar;
@@ -30,12 +33,21 @@ AppCompatButton but_complaint,but_recent;
         getSupportActionBar().setDisplayShowTitleEnabled(true);
 
 
+
+
         ll_registration.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                Intent i = new Intent(Issue_reporting.this, Complaint_Register.class);
-                startActivity(i);
+               new SimpleTooltip.Builder(Issue_reporting.this)
+                        .anchorView(ll_registration)
+                        .text("he hello")
+                        .gravity(Gravity.BOTTOM)
+                        .build()
+                        .show();
+
+          /*      Intent i = new Intent(Issue_reporting.this, Complaint_Register.class);
+                startActivity(i);*/
 
             }
         });
