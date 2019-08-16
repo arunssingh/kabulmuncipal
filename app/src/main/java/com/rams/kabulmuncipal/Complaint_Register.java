@@ -158,7 +158,7 @@ public class Complaint_Register extends BaseActivity {
         issuelist.add(district);
 
         ArrayAdapter<District> spinnerAdapter3 = new ArrayAdapter<District>(Complaint_Register.this, R.layout.activity_ac, issuelist);
-        spinnerAdapter3.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinnerAdapter3.setDropDownViewResource(R.layout.activity_ac);
         spinner_issue.setAdapter(spinnerAdapter3);
 
         spinner_dirt.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {

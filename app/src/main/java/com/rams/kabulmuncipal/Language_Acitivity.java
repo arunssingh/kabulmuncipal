@@ -68,11 +68,11 @@ RelativeLayout  rl1,rl2;
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if(isChecked)
                 {
-                   StaticDataHelper.setBooleanInPreferences(Language_Acitivity.this,StaticDataHelper.isUserLogin,true);
+                  // StaticDataHelper.setBooleanInPreferences(Language_Acitivity.this,StaticDataHelper.isUserLogin,true);
 
                     StaticDataHelper.setStringInPreferences(Language_Acitivity.this,StaticDataHelper.LANGUAGE,"PASHTO");
                     check_dari.setChecked(false);
-                    Intent i = new Intent(Language_Acitivity.this,MainActivity.class);
+                    Intent i = new Intent(Language_Acitivity.this,Tutorial_Firstscreen.class);
                     startActivity(i);
                     finish();
                 }
@@ -89,10 +89,10 @@ RelativeLayout  rl1,rl2;
                 if(isChecked)
                 {
                     StaticDataHelper.setStringInPreferences(Language_Acitivity.this,StaticDataHelper.LANGUAGE,"DARI");
-                    StaticDataHelper.setBooleanInPreferences(Language_Acitivity.this,StaticDataHelper.isUserLogin,true);
+                   // StaticDataHelper.setBooleanInPreferences(Language_Acitivity.this,StaticDataHelper.isUserLogin,true);
 
                     check_pastho.setChecked(false);
-                    Intent i = new Intent(Language_Acitivity.this,MainActivity.class);
+                    Intent i = new Intent(Language_Acitivity.this,Tutorial_Firstscreen.class);
                     startActivity(i);
                     finish();
                 }

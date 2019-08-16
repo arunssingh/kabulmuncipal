@@ -84,6 +84,11 @@ public class Tutorialpageradapter extends PagerAdapter {
 
     			//tv_name.setText("Customize your message in celeb voice.");
     		}
+			else if (position==2) {
+				btn_skip_s.setVisibility(View.GONE);
+
+				//tv_name.setText("Customize your message in celeb voice.");
+			}
     		else
     		{
 				btn_next.setVisibility(View.GONE);

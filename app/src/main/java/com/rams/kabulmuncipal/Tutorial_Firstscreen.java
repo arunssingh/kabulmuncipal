@@ -32,10 +32,12 @@ public class Tutorial_Firstscreen extends BaseActivity {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.tutorial);
+		list=new ArrayList<Integer>();
 
 		list.add(R.mipmap.driver_1);
-		list.add(R.mipmap.driver_1);
 		list.add(R.mipmap.driver_2);
+		list.add(R.mipmap.driver_3);
+		list.add(R.mipmap.driver_4);
 	
 	
 		

@@ -39,15 +39,15 @@ AppCompatButton but_complaint,but_recent;
             @Override
             public void onClick(View v) {
 
-               new SimpleTooltip.Builder(Issue_reporting.this)
+           /*    new SimpleTooltip.Builder(Issue_reporting.this)
                         .anchorView(ll_registration)
                         .text("he hello")
                         .gravity(Gravity.BOTTOM)
                         .build()
-                        .show();
+                        .show();*/
 
-          /*      Intent i = new Intent(Issue_reporting.this, Complaint_Register.class);
-                startActivity(i);*/
+              Intent i = new Intent(Issue_reporting.this, Complaint_Register.class);
+                startActivity(i);
 
             }
         });

@@ -301,7 +301,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/designation"
-                android:visibility="gone"
+
                 android:textSize="20sp"
                 android:textColor="@color/white"/>
 
@@ -312,7 +312,7 @@
                 android:textColor="@color/hint_color"
                 android:textColorHint="@color/hint_color"
                 android:maxLines="1"
-                android:visibility="gone"
+
 
 
                 android:hint="@string/enterdesignation" />
